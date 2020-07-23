@@ -28,6 +28,8 @@ Clear notifications `php artisan notifications:clear`
 
 ## API Endpoints
 
+Importable Postman collection file included in repo `api-example.postman_collection`
+
 ### Registration
 
 [POST] `/api/register`

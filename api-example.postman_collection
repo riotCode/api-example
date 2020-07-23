@@ -1,0 +1,324 @@
+{
+	"info": {
+		"_postman_id": "ce9552dc-8ee6-437a-8a62-6ba570ea570e",
+		"name": "Api Example",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "User",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "user@example.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://homestead.test/api/register",
+					"protocol": "http",
+					"host": [
+						"homestead",
+						"test"
+					],
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "user@example.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://homestead.test/api/login",
+					"protocol": "http",
+					"host": [
+						"homestead",
+						"test"
+					],
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZjdlZGYyMjFkOGExMjdhODRjOTI2Mzc5YzQzZDQzNTRmYmFlNTY1MWFhYmJhOTJiMDBkY2FhYmZkOTQzODY0NWJiNzJhNTc1MDFhMTMwYTkiLCJpYXQiOjE1OTU1MTAzMTUsIm5iZiI6MTU5NTUxMDMxNSwiZXhwIjoxNjI3MDQ2MzE1LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.hgjnMLMF0S6H0nv1T4ZcLXDJCiEVPmcoheY97p804_T7LhVCefX7SHgkF-rUJoTZHmV72HF5XmtsyaJYpOh21Gsuiha_5BNj1-eRV7vZ5WRh_hOygdUY4LSh1c1vxNxItr1K37ZgKIXcOXEZYgOlKuCru5pOwQZqBXZVeyMc8kw2hyuUxGT0yWYe7fdy7vTZ50bh2pRRCca62SIAEPRu2yeFzeNHnX2HGjtWodj3a8yQDc4mRhb9w-z9hUnjU7ZYF37-VBWXn2HHmwJXGTQAmGvY61Yyvw1YEz74445YFf9ajCpPc21_Qnl-E26fFIVC8vjBwnrpec-ZPCEg8kxCyeugpDvFr2OxM4pJEzQV4Ap_tpMDUYUx0dM29P5gZdOVpfSOTqsYeQvvXFT474tB8Qif62u-RNrRAXFhZCT3T3tBhBEgB2U_ybe-MthgzWR7EsRT6mpk6CWsxsNrx03EOluBC1FAq9T0jV9nKgvqchEvPGs0fbgF6UK6kbzKTkKX-scqfK-9WsroOsivPDVrtrozlo6C3ChuWL--J5ZuGeFFG8BPFWaSY0FGQZfbxpJJYfG7hj1vXrHwwejp96RbfFE2cK7s_rHBQdzPfcN9YipciQTcfTLYGly9vBXKMUx0TUS7LE5AvZBhceitj6KJiscaIh5U_jcTnke6drgHABw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://homestead.test/api/user",
+					"protocol": "http",
+					"host": [
+						"homestead",
+						"test"
+					],
+					"path": [
+						"api",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Notifications [index]",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZjdlZGYyMjFkOGExMjdhODRjOTI2Mzc5YzQzZDQzNTRmYmFlNTY1MWFhYmJhOTJiMDBkY2FhYmZkOTQzODY0NWJiNzJhNTc1MDFhMTMwYTkiLCJpYXQiOjE1OTU1MTAzMTUsIm5iZiI6MTU5NTUxMDMxNSwiZXhwIjoxNjI3MDQ2MzE1LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.hgjnMLMF0S6H0nv1T4ZcLXDJCiEVPmcoheY97p804_T7LhVCefX7SHgkF-rUJoTZHmV72HF5XmtsyaJYpOh21Gsuiha_5BNj1-eRV7vZ5WRh_hOygdUY4LSh1c1vxNxItr1K37ZgKIXcOXEZYgOlKuCru5pOwQZqBXZVeyMc8kw2hyuUxGT0yWYe7fdy7vTZ50bh2pRRCca62SIAEPRu2yeFzeNHnX2HGjtWodj3a8yQDc4mRhb9w-z9hUnjU7ZYF37-VBWXn2HHmwJXGTQAmGvY61Yyvw1YEz74445YFf9ajCpPc21_Qnl-E26fFIVC8vjBwnrpec-ZPCEg8kxCyeugpDvFr2OxM4pJEzQV4Ap_tpMDUYUx0dM29P5gZdOVpfSOTqsYeQvvXFT474tB8Qif62u-RNrRAXFhZCT3T3tBhBEgB2U_ybe-MthgzWR7EsRT6mpk6CWsxsNrx03EOluBC1FAq9T0jV9nKgvqchEvPGs0fbgF6UK6kbzKTkKX-scqfK-9WsroOsivPDVrtrozlo6C3ChuWL--J5ZuGeFFG8BPFWaSY0FGQZfbxpJJYfG7hj1vXrHwwejp96RbfFE2cK7s_rHBQdzPfcN9YipciQTcfTLYGly9vBXKMUx0TUS7LE5AvZBhceitj6KJiscaIh5U_jcTnke6drgHABw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://homestead.test/api/notifications",
+					"protocol": "http",
+					"host": [
+						"homestead",
+						"test"
+					],
+					"path": [
+						"api",
+						"notifications"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Notifications [store]",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZjdlZGYyMjFkOGExMjdhODRjOTI2Mzc5YzQzZDQzNTRmYmFlNTY1MWFhYmJhOTJiMDBkY2FhYmZkOTQzODY0NWJiNzJhNTc1MDFhMTMwYTkiLCJpYXQiOjE1OTU1MTAzMTUsIm5iZiI6MTU5NTUxMDMxNSwiZXhwIjoxNjI3MDQ2MzE1LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.hgjnMLMF0S6H0nv1T4ZcLXDJCiEVPmcoheY97p804_T7LhVCefX7SHgkF-rUJoTZHmV72HF5XmtsyaJYpOh21Gsuiha_5BNj1-eRV7vZ5WRh_hOygdUY4LSh1c1vxNxItr1K37ZgKIXcOXEZYgOlKuCru5pOwQZqBXZVeyMc8kw2hyuUxGT0yWYe7fdy7vTZ50bh2pRRCca62SIAEPRu2yeFzeNHnX2HGjtWodj3a8yQDc4mRhb9w-z9hUnjU7ZYF37-VBWXn2HHmwJXGTQAmGvY61Yyvw1YEz74445YFf9ajCpPc21_Qnl-E26fFIVC8vjBwnrpec-ZPCEg8kxCyeugpDvFr2OxM4pJEzQV4Ap_tpMDUYUx0dM29P5gZdOVpfSOTqsYeQvvXFT474tB8Qif62u-RNrRAXFhZCT3T3tBhBEgB2U_ybe-MthgzWR7EsRT6mpk6CWsxsNrx03EOluBC1FAq9T0jV9nKgvqchEvPGs0fbgF6UK6kbzKTkKX-scqfK-9WsroOsivPDVrtrozlo6C3ChuWL--J5ZuGeFFG8BPFWaSY0FGQZfbxpJJYfG7hj1vXrHwwejp96RbfFE2cK7s_rHBQdzPfcN9YipciQTcfTLYGly9vBXKMUx0TUS7LE5AvZBhceitj6KJiscaIh5U_jcTnke6drgHABw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "message",
+							"value": "Test notification",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://homestead.test/api/notifications",
+					"protocol": "http",
+					"host": [
+						"homestead",
+						"test"
+					],
+					"path": [
+						"api",
+						"notifications"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Notifications [show]",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZjdlZGYyMjFkOGExMjdhODRjOTI2Mzc5YzQzZDQzNTRmYmFlNTY1MWFhYmJhOTJiMDBkY2FhYmZkOTQzODY0NWJiNzJhNTc1MDFhMTMwYTkiLCJpYXQiOjE1OTU1MTAzMTUsIm5iZiI6MTU5NTUxMDMxNSwiZXhwIjoxNjI3MDQ2MzE1LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.hgjnMLMF0S6H0nv1T4ZcLXDJCiEVPmcoheY97p804_T7LhVCefX7SHgkF-rUJoTZHmV72HF5XmtsyaJYpOh21Gsuiha_5BNj1-eRV7vZ5WRh_hOygdUY4LSh1c1vxNxItr1K37ZgKIXcOXEZYgOlKuCru5pOwQZqBXZVeyMc8kw2hyuUxGT0yWYe7fdy7vTZ50bh2pRRCca62SIAEPRu2yeFzeNHnX2HGjtWodj3a8yQDc4mRhb9w-z9hUnjU7ZYF37-VBWXn2HHmwJXGTQAmGvY61Yyvw1YEz74445YFf9ajCpPc21_Qnl-E26fFIVC8vjBwnrpec-ZPCEg8kxCyeugpDvFr2OxM4pJEzQV4Ap_tpMDUYUx0dM29P5gZdOVpfSOTqsYeQvvXFT474tB8Qif62u-RNrRAXFhZCT3T3tBhBEgB2U_ybe-MthgzWR7EsRT6mpk6CWsxsNrx03EOluBC1FAq9T0jV9nKgvqchEvPGs0fbgF6UK6kbzKTkKX-scqfK-9WsroOsivPDVrtrozlo6C3ChuWL--J5ZuGeFFG8BPFWaSY0FGQZfbxpJJYfG7hj1vXrHwwejp96RbfFE2cK7s_rHBQdzPfcN9YipciQTcfTLYGly9vBXKMUx0TUS7LE5AvZBhceitj6KJiscaIh5U_jcTnke6drgHABw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://homestead.test/api/notifications/1",
+					"protocol": "http",
+					"host": [
+						"homestead",
+						"test"
+					],
+					"path": [
+						"api",
+						"notifications",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Notifications [update]",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZjdlZGYyMjFkOGExMjdhODRjOTI2Mzc5YzQzZDQzNTRmYmFlNTY1MWFhYmJhOTJiMDBkY2FhYmZkOTQzODY0NWJiNzJhNTc1MDFhMTMwYTkiLCJpYXQiOjE1OTU1MTAzMTUsIm5iZiI6MTU5NTUxMDMxNSwiZXhwIjoxNjI3MDQ2MzE1LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.hgjnMLMF0S6H0nv1T4ZcLXDJCiEVPmcoheY97p804_T7LhVCefX7SHgkF-rUJoTZHmV72HF5XmtsyaJYpOh21Gsuiha_5BNj1-eRV7vZ5WRh_hOygdUY4LSh1c1vxNxItr1K37ZgKIXcOXEZYgOlKuCru5pOwQZqBXZVeyMc8kw2hyuUxGT0yWYe7fdy7vTZ50bh2pRRCca62SIAEPRu2yeFzeNHnX2HGjtWodj3a8yQDc4mRhb9w-z9hUnjU7ZYF37-VBWXn2HHmwJXGTQAmGvY61Yyvw1YEz74445YFf9ajCpPc21_Qnl-E26fFIVC8vjBwnrpec-ZPCEg8kxCyeugpDvFr2OxM4pJEzQV4Ap_tpMDUYUx0dM29P5gZdOVpfSOTqsYeQvvXFT474tB8Qif62u-RNrRAXFhZCT3T3tBhBEgB2U_ybe-MthgzWR7EsRT6mpk6CWsxsNrx03EOluBC1FAq9T0jV9nKgvqchEvPGs0fbgF6UK6kbzKTkKX-scqfK-9WsroOsivPDVrtrozlo6C3ChuWL--J5ZuGeFFG8BPFWaSY0FGQZfbxpJJYfG7hj1vXrHwwejp96RbfFE2cK7s_rHBQdzPfcN9YipciQTcfTLYGly9vBXKMUx0TUS7LE5AvZBhceitj6KJiscaIh5U_jcTnke6drgHABw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "read",
+							"value": "true",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://homestead.test/api/notifications/1",
+					"protocol": "http",
+					"host": [
+						"homestead",
+						"test"
+					],
+					"path": [
+						"api",
+						"notifications",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Notifications [delete]",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZjdlZGYyMjFkOGExMjdhODRjOTI2Mzc5YzQzZDQzNTRmYmFlNTY1MWFhYmJhOTJiMDBkY2FhYmZkOTQzODY0NWJiNzJhNTc1MDFhMTMwYTkiLCJpYXQiOjE1OTU1MTAzMTUsIm5iZiI6MTU5NTUxMDMxNSwiZXhwIjoxNjI3MDQ2MzE1LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.hgjnMLMF0S6H0nv1T4ZcLXDJCiEVPmcoheY97p804_T7LhVCefX7SHgkF-rUJoTZHmV72HF5XmtsyaJYpOh21Gsuiha_5BNj1-eRV7vZ5WRh_hOygdUY4LSh1c1vxNxItr1K37ZgKIXcOXEZYgOlKuCru5pOwQZqBXZVeyMc8kw2hyuUxGT0yWYe7fdy7vTZ50bh2pRRCca62SIAEPRu2yeFzeNHnX2HGjtWodj3a8yQDc4mRhb9w-z9hUnjU7ZYF37-VBWXn2HHmwJXGTQAmGvY61Yyvw1YEz74445YFf9ajCpPc21_Qnl-E26fFIVC8vjBwnrpec-ZPCEg8kxCyeugpDvFr2OxM4pJEzQV4Ap_tpMDUYUx0dM29P5gZdOVpfSOTqsYeQvvXFT474tB8Qif62u-RNrRAXFhZCT3T3tBhBEgB2U_ybe-MthgzWR7EsRT6mpk6CWsxsNrx03EOluBC1FAq9T0jV9nKgvqchEvPGs0fbgF6UK6kbzKTkKX-scqfK-9WsroOsivPDVrtrozlo6C3ChuWL--J5ZuGeFFG8BPFWaSY0FGQZfbxpJJYfG7hj1vXrHwwejp96RbfFE2cK7s_rHBQdzPfcN9YipciQTcfTLYGly9vBXKMUx0TUS7LE5AvZBhceitj6KJiscaIh5U_jcTnke6drgHABw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://homestead.test/api/notifications/1",
+					"protocol": "http",
+					"host": [
+						"homestead",
+						"test"
+					],
+					"path": [
+						"api",
+						"notifications",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
