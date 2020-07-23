@@ -19,3 +19,123 @@ Generate the app key - `php artisan key:generate`
 Migrate the database - `php artisan migrate`
 
 Install passport keys - `php artisan passport:install`
+
+## API Endpoints
+
+### Registration
+
+[POST] `/api/register`
+
+Request params: `name`, `email`, `password`
+
+Response: `{"token":"..."}`
+
+### Login
+
+[POST] `/api/login`
+
+Request params: `email`, `password`
+
+Response: `{"token":"..."}`
+
+### Current User
+
+[GET] `/api/user`
+
+Response:
+```
+{
+    "user": {
+        "id": 1,
+        "name": "User",
+        "email": "user@example.com",
+        "email_verified_at": null,
+        "created_at": "2020-07-23T12:51:03.000000Z",
+        "updated_at": "2020-07-23T12:51:03.000000Z"
+    }
+}
+```
+
+### Notifications Index (List)
+
+[GET] `/api/notifications`
+
+Response:
+```
+{
+    "success": true,
+    "data": [
+        {
+            "id": 1,
+            "user_id": 1,
+            "message": "Test notification",
+            "read": 0,
+            "created_at": "2020-07-23T14:14:12.000000Z",
+            "updated_at": "2020-07-23T14:14:12.000000Z"
+        }
+    ]
+}
+```
+
+### Notifications Store (Create)
+
+[POST] `/api/notifications`
+
+Request param: `message`
+
+Response:
+```
+{
+    "success": true,
+    "data": {
+        "message": "Test notification",
+        "user_id": 1,
+        "updated_at": "2020-07-23T14:14:12.000000Z",
+        "created_at": "2020-07-23T14:14:12.000000Z",
+        "id": 1
+    }
+}
+```
+
+### Notifications Show
+
+[GET] `/api/notifications/{id}`
+
+Response:
+```
+{
+    "success": true,
+    "data": {
+        "id": 1,
+        "user_id": 1,
+        "message": "Test notification",
+        "read": 0,
+        "created_at": "2020-07-23T14:14:12.000000Z",
+        "updated_at": "2020-07-23T14:14:12.000000Z"
+    }
+}
+```
+
+### Notifications Update
+
+[PUT] `/api/notifications/{id}`
+
+Request param: `read` (boolean)
+
+Response:
+```
+{
+    "success": true
+}
+```
+
+### Notifications Delete
+
+[DELETE] `/api/notifications/{id}`
+
+Response:
+```
+{
+    "success": true
+}
+```
