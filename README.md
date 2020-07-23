@@ -20,6 +20,12 @@ Migrate the database - `php artisan migrate`
 
 Install passport keys - `php artisan passport:install`
 
+## Commands
+
+Seeder `php artisan db:seed`
+
+Clear notifications `php artisan notifications:clear`
+
 ## API Endpoints
 
 ### Registration
